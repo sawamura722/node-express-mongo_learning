@@ -6,7 +6,8 @@ import {
     getProductById,
     createProduct,
     updateProduct,
-    deleteProduct
+    deleteProduct,
+    getProductsByCategory
 } from '../controllers/product.controller.js';
 
 router.get('/', getProducts)
@@ -14,5 +15,6 @@ router.get('/:id', getProductById)
 router.post('/', createProduct)
 router.put('/:id', updateProduct)
 router.delete('/:id', deleteProduct)
+router.get('/category/:id', getProductsByCategory)
 
 export default router

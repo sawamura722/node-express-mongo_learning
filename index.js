@@ -2,6 +2,7 @@ import express from 'express'
 import mongoose from 'mongoose'
 import dotenv from 'dotenv'
 import productRoute from './routes/product.route.js'
+import categoryRoute from './routes/category.route.js'
 
 dotenv.config()
 const app = express()
@@ -12,6 +13,7 @@ app.use(express.urlencoded({ extended: true }))
 
 // routes
 app.use("/api/products", productRoute)
+app.use("/api/categories", categoryRoute)
 
 app.listen(3000, () => {
   console.log('Server is running on port 3000')
